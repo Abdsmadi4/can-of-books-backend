@@ -20,6 +20,11 @@ app.get('/test', (_request, response) => {
 
 })
 
+app.get( '/', ( _request, response ) => {
+  response.send( 'Hello World!' );
+} );
+
+
 app.get( '/books', handleGetBooks );
 
 mongoose.connect('mongodb://127.0.0.1:27017/booksDb');
